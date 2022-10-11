@@ -101,12 +101,5 @@
     "http-proxy-middleware": "^0.19.1"
   },
   "proxy": {
-    "/clientexchanges/api": "http://msitappdev04:8092/clientexchanges/api",
-    "/clientprofile/api": "http://msitappstg01.ms.otpp.net:8088/clientprofile/api",
-    "/died-on-pension/api": "http://msitappstg03:47877/died-on-pension/api",
-    "/document-admin/api": "http://msitappstg01:46030/document-admin/api",
-    "/pbs/api": "http://msitappdev02:8086/pbs/api",
-    "/products/api": "http://msitappstg02.ms.otpp.net:8087/products/api",
-    "/workflow-process/api": "http://msitappdev01:52146/workflow-process/api"
   }
 }
