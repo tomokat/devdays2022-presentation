@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <style>
+      @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+      @import url('//ed-style-system.cfapp.cac.dev.ms.otpp.net/icon8/css/styles.css');
+      @import url('//ed-style-system.cfapp.cac.dev.ms.otpp.net/css/main.css');
+    </style>
+
+    <script type="module" src="dist/ed-component-library/ed-component-library.esm.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.10/angular.min.js" integrity="sha512-P9OXv1AmL2WNrBOELfBF99q/Trv29Kk8f25NxC20IyiLmNHyOyYdCAkSNmA3r7e8MZoO+Wg0gs8RpheY5bglDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app-module.js"></script>
+    <script src="wc-event.js"></script>
+    <script src="wc-demo-controller.js"></script>
+  </head>
+  <body ng-app="wcDemoApp" style="padding:10px">
+    <div ng-controller="WcDemoController as ctrl">
+      <div class="form-group">
+        <textarea class="textarea form-control traditional" rows="6" ng-model="ctrl.text"></textarea>
+        <ed-button type="primary" button-caption="Open" ng-click="ctrl.openWc()"></ed-button>
+      </div>
+      <ed-modal>
+        <ed-text-editor
+          wc-event="ctrl.updateText(event)"
+          wc-event-name="textUpdate">
+        </ed-text-editor>
+      </ed-modal>
+    </div>
+  </body>
+</html>
