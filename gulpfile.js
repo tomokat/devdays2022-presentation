@@ -117,11 +117,6 @@ gulp.task('js-es6', () => {
     });
 })
 
-gulp.task('copyWebComponent', () => {
-    return gulp.src("node_modules/ed-component-library/dist/ed-component-library/*")
-      .pipe(gulp.dest("./dist/ed-component-library")) 
-})
-
 gulp.task('js', gulp.parallel('js-es5', 'js-es6'));
 
 // Creates a UMD and ES module bundle for each of our
